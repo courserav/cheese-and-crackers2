@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Cheese.create(piece: "cheese", image_url: "https://live.staticflickr.com/65535/51643632691_0289166460_c.jpg")
+Cracker.create(piece: "cracker", image_url: "https://live.staticflickr.com/65535/51644987927_9191b7af0a_c.jpg")
