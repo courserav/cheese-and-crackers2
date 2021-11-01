@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import About from './About';
+import Game from './Game';
+import Home from './Home';
+import Howto from './Howto';
+import Navbar from './Navbar';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux'
 import allReducer from './reducers'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const projectStore = createStore(
@@ -17,7 +22,14 @@ const projectStore = createStore(
 ReactDOM.render(
   <Provider store={projectStore}>
     <Router>
-      <App />
+      <>
+        <App />
+        <Navbar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/game" component={Game} />
+        <Route exact path="/howto" component={Howto} />
+      </>
     </Router>
   </Provider>,
   document.getElementById('root')
