@@ -35,7 +35,7 @@ c-and-c-api/config/master.key
 **/yarn-error.log
 **yarn-debug.log*
 **.yarn-integrity
-**/config/credentials.yml.enc
+c-and-c-api/config/credentials.yml.enc
 
 # Ignore Facebook App credentials for Omniauth login
 **.env
