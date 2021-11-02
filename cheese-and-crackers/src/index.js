@@ -1,21 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import App from './App';
 import About from './About';
 import Game from './Game';
 import Home from './Home';
 import Howto from './Howto';
 import Navbar from './Navbar';
+
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import allReducer from './reducers'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import thunk from 'redux-thunk'
 
 const projectStore = createStore(
   allReducer, 
+  applyMiddleware(thunk),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
