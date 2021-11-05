@@ -5,15 +5,28 @@ import { Col } from 'react-bootstrap'
 
 const GameRenderer = ({board}) => {
 
-        let renderedBoard = []
-        let spaceCount = 1
+    let grid = []
+    let counter = 0
 
-        for (let i = 0; i < board.length; i++){
-            renderedBoard.push(<Row sm={board.length}>{board.map(space => <Col id={spaceCount++}>{space}</Col>)}</Row>)
+    for (let i = 0; i < Math.sqrt(board.length); i++){
+        grid[i] = []
+        for (let j = 0; j < Math.sqrt(board.length); j++){
+            grid[i].push(board[counter])
+            counter++
         }
-        return(
+    }
+
+    let renderedBoard = []
+
+    for (let i = 0; i < grid.length; i++){
+        renderedBoard = grid.map(array => <Row sm={grid.length}>{array.map(space => <Col><img src={space} alt="space" width="100px" height="100px"/></Col>)}</Row>)
+    }
+
+    return(
+        <>
             <Container>{renderedBoard}</Container>
-        )
+        </>
+    )
 }
 
 export default GameRenderer

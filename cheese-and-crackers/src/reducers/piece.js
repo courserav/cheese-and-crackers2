@@ -1,9 +1,9 @@
-const pieceReducer = (state = initialState, action) => {
+const pieceReducer = (state = {pieces: [], loading: false}, action) => {
     switch (action.type){
         case 'LOADING_PIECES':
-
-        case 'GET_PIECES':
-
+            return {...state, pieces: [...state.pieces], loading: true}
+        case 'ADD_PIECES':
+            return {...state, pieces: action.payload, loading: false}
         default:
             return state
     }
