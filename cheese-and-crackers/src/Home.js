@@ -9,6 +9,12 @@ class Home extends Component{
         this.props.fetchPlayers()
     }
 
+    componentDidUpdate(prevProps){
+        if (prevProps.activePlayer !== this.props.activePlayer){
+            this.props.fetchPlayers()
+        }
+    }
+
     player = " "
 
     handleSubmit = (event) => {
@@ -42,6 +48,7 @@ const mapStateToProps = (state) => {
     return{
         players: state.player.players,
         loading: state.player.loading,
+        activePlayer: state.player.active
     }
 }
 
