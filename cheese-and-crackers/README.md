@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Welcome to Cheese and Crackers. Download the project and run react and rails server. You can navigate through the app pages on the navbar below the header. The app shows picture loading status from the server up at the top. If the pieces aren't loaded then the app won't work. You can select the game board you want to play on from 'game', after that it's just tic-tac-toe. Home will allow you to add your name to the list of logged players. You don't have to add your name, but doing so will push it to the database and you can see it while the game is running.
+
 ## Available Scripts
 
 In the project directory, you can run:
