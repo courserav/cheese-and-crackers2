@@ -10,6 +10,7 @@ class Howto extends React.Component{
                 <p>From top to bottom or across, these are all win conditions.</p>
                 <p>Enter your name on the home page to see your name.</p>
                 <p>On the game page, put the space you want to fill in the text box as a number and then hit submit.</p>
+                <p>If the app is still loading pieces up at the top then the game will not work.</p>
             </>   
         )
     }

@@ -118,6 +118,7 @@ class Game extends Component{
           <input type='button' value="Set Piece" onClick={() => this.props.setPiece(this.props.pieces[0].image_url, this.input, this.props.pieces[1].image_url)}/>
           </div>
           }
+          
         <GameRenderer pieces={this.props.pieces} board={this.props.gameBoard}/>
         <ActivePlayer player={this.props.activePlayer}/>
       </div>
