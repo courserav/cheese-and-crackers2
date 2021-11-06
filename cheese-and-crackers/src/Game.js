@@ -77,8 +77,21 @@ class Game extends Component{
       }
       break
       case 25:
-        
+        if (this.props.gameBoard.slice(0,5).every(value => value === cheese) === true || this.props.gameBoard.slice(5,10).every(value => value === cheese) === true || this.props.gameBoard.slice(10,15).every(value => value === cheese) === true || this.props.gameBoard.slice(15,20).every(value => value === cheese) === true || this.props.gameBoard.slice(20,25).every(value => value === cheese) === true || allColumns[0].every(value => value === cheese) === true || allColumns[1].every(value => value === cheese) === true || allColumns[2].every(value => value === cheese) === true || allColumns[3].every(value => value === cheese) === true || allColumns[4].every(value => value === cheese) === true || diagonals[0].every(value => value === cheese) === true || diagonals[1].every(value => value === cheese) === true){
+          alert("Cheese wins")
+        }
+        else if (this.props.gameBoard.slice(0,5).every(value => value === cracker) === true || this.props.gameBoard.slice(5,10).every(value => value === cracker) === true || this.props.gameBoard.slice(10,15).every(value => value === cracker) === true || this.props.gameBoard.slice(15,20).every(value => value === cracker) === true || this.props.gameBoard.slice(20,25).every(value => value === cracker) === true || allColumns[0].every(value => value === cracker) === true || allColumns[1].every(value => value === cracker) === true || allColumns[2].every(value => value === cracker) === true || allColumns[3].every(value => value === cracker) === true || allColumns[4].every(value => value === cracker) === true || diagonals[0].every(value => value === cracker) === true || diagonals[1].every(value => value === cracker) === true){
+          alert("Cracker wins")       
+        }
       break
+      case 49:
+        if (this.props.gameBoard.slice(0,7).every(value => value === cheese) === true || this.props.gameBoard.slice(7,14).every(value => value === cheese) === true || this.props.gameBoard.slice(14,21).every(value => value === cheese) === true || this.props.gameBoard.slice(21,28).every(value => value === cheese) === true || this.props.gameBoard.slice(28,35).every(value => value === cheese) === true || this.props.gameBoard.slice(35,42).every(value => value === cheese) === true || this.props.gameBoard.slice(42,49).every(value => value === cheese) === true || allColumns[0].every(value => value === cheese) === true || allColumns[1].every(value => value === cheese) === true || allColumns[2].every(value => value === cheese) === true || allColumns[3].every(value => value === cheese) === true || allColumns[4].every(value => value === cheese) === true || allColumns[5].every(value => value === cheese) === true || allColumns[5].every(value => value === cheese) === true || diagonals[0].every(value => value === cheese) === true || diagonals[1].every(value => value === cheese) === true){
+          alert("Cheese wins")
+        }
+        else if (this.props.gameBoard.slice(0,7).every(value => value === cracker) === true || this.props.gameBoard.slice(7,14).every(value => value === cracker) === true || this.props.gameBoard.slice(14,21).every(value => value === cracker) === true || this.props.gameBoard.slice(21,28).every(value => value === cracker) === true || this.props.gameBoard.slice(28,35).every(value => value === cracker) === true || this.props.gameBoard.slice(35,42).every(value => value === cracker) === true || this.props.gameBoard.slice(42,49).every(value => value === cracker) === true || allColumns[0].every(value => value === cracker) === true || allColumns[1].every(value => value === cracker) === true || allColumns[2].every(value => value === cracker) === true || allColumns[3].every(value => value === cracker) === true || allColumns[4].every(value => value === cracker) === true || allColumns[5].every(value => value === cracker) === true || allColumns[5].every(value => value === cracker) === true || diagonals[0].every(value => value === cracker) === true || diagonals[1].every(value => value === cracker) === true){
+          alert("Cracker wins")       
+        }
+        break
      default:
       console.log(length)
     }
