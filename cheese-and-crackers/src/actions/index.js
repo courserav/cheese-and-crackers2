@@ -43,7 +43,7 @@ export const fetchPlayers = () => {
     }
 }
 
-export function addPlayer(playerName) {
+export const addPlayer = (playerName) => {
     return(dispatch) => {
       dispatch({type: 'POST_PLAYER'})
       return fetch(`http://localhost:8080/players`, {
@@ -56,7 +56,7 @@ export function addPlayer(playerName) {
       })
         .then(res => res.json())
         .then(responseJson => {
-           dispatch({type: 'POST_SUCCESS', player: responseJson.name})
+           dispatch({type: 'POST_SUCCESS', payload: responseJson})
         })
     }
   }

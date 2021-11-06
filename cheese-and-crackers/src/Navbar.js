@@ -11,7 +11,7 @@ class Navbar extends React.Component{
     render(){
         return(
             <>
-                <NavLink to='/' exact style={style}>Home</NavLink>
+                <NavLink to='/home' exact style={style}>Home</NavLink>
                 <NavLink to='/about' exact style={style}>About</NavLink>
                 <NavLink to='/game' exact style={style}>Game</NavLink>
                 <NavLink to='/howto' exact style={style}>How To Play</NavLink>
